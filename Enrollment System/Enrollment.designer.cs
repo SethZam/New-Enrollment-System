@@ -45,6 +45,9 @@ namespace Enrollment_System
     partial void Insertcourse_tbl(course_tbl instance);
     partial void Updatecourse_tbl(course_tbl instance);
     partial void Deletecourse_tbl(course_tbl instance);
+    partial void Insertins_tbl(ins_tbl instance);
+    partial void Updateins_tbl(ins_tbl instance);
+    partial void Deleteins_tbl(ins_tbl instance);
     #endregion
 		
 		public EnrollmentDataContext() : 
@@ -114,6 +117,14 @@ namespace Enrollment_System
 			get
 			{
 				return this.GetTable<course_tbl>();
+			}
+		}
+		
+		public System.Data.Linq.Table<ins_tbl> ins_tbls
+		{
+			get
+			{
+				return this.GetTable<ins_tbl>();
 			}
 		}
 		
@@ -934,6 +945,8 @@ namespace Enrollment_System
 		
 		private System.Nullable<int> _ins_id;
 		
+		private EntitySet<ins_tbl> _ins_tbls;
+		
 		private EntityRef<course_tbl> _course_tbl;
 		
     #region Extensibility Method Definitions
@@ -956,6 +969,7 @@ namespace Enrollment_System
 		
 		public subject_tbl()
 		{
+			this._ins_tbls = new EntitySet<ins_tbl>(new Action<ins_tbl>(this.attach_ins_tbls), new Action<ins_tbl>(this.detach_ins_tbls));
 			this._course_tbl = default(EntityRef<course_tbl>);
 			OnCreated();
 		}
@@ -1084,6 +1098,19 @@ namespace Enrollment_System
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="subject_tbl_ins_tbl", Storage="_ins_tbls", ThisKey="subject_id", OtherKey="subject_id")]
+		public EntitySet<ins_tbl> ins_tbls
+		{
+			get
+			{
+				return this._ins_tbls;
+			}
+			set
+			{
+				this._ins_tbls.Assign(value);
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="course_tbl_subject_tbl", Storage="_course_tbl", ThisKey="course_id", OtherKey="course_id", IsForeignKey=true)]
 		public course_tbl course_tbl
 		{
@@ -1136,6 +1163,18 @@ namespace Enrollment_System
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+		
+		private void attach_ins_tbls(ins_tbl entity)
+		{
+			this.SendPropertyChanging();
+			entity.subject_tbl = this;
+		}
+		
+		private void detach_ins_tbls(ins_tbl entity)
+		{
+			this.SendPropertyChanging();
+			entity.subject_tbl = null;
 		}
 	}
 	
@@ -1278,6 +1317,181 @@ namespace Enrollment_System
 		{
 			this.SendPropertyChanging();
 			entity.course_tbl = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ins_tbl")]
+	public partial class ins_tbl : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _ins_id;
+		
+		private string _ins_fname;
+		
+		private string _ins_lname;
+		
+		private System.Nullable<int> _subject_id;
+		
+		private EntityRef<subject_tbl> _subject_tbl;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void Onins_idChanging(int value);
+    partial void Onins_idChanged();
+    partial void Onins_fnameChanging(string value);
+    partial void Onins_fnameChanged();
+    partial void Onins_lnameChanging(string value);
+    partial void Onins_lnameChanged();
+    partial void Onsubject_idChanging(System.Nullable<int> value);
+    partial void Onsubject_idChanged();
+    #endregion
+		
+		public ins_tbl()
+		{
+			this._subject_tbl = default(EntityRef<subject_tbl>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ins_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int ins_id
+		{
+			get
+			{
+				return this._ins_id;
+			}
+			set
+			{
+				if ((this._ins_id != value))
+				{
+					this.Onins_idChanging(value);
+					this.SendPropertyChanging();
+					this._ins_id = value;
+					this.SendPropertyChanged("ins_id");
+					this.Onins_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ins_fname", DbType="VarChar(50)")]
+		public string ins_fname
+		{
+			get
+			{
+				return this._ins_fname;
+			}
+			set
+			{
+				if ((this._ins_fname != value))
+				{
+					this.Onins_fnameChanging(value);
+					this.SendPropertyChanging();
+					this._ins_fname = value;
+					this.SendPropertyChanged("ins_fname");
+					this.Onins_fnameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ins_lname", DbType="VarChar(50)")]
+		public string ins_lname
+		{
+			get
+			{
+				return this._ins_lname;
+			}
+			set
+			{
+				if ((this._ins_lname != value))
+				{
+					this.Onins_lnameChanging(value);
+					this.SendPropertyChanging();
+					this._ins_lname = value;
+					this.SendPropertyChanged("ins_lname");
+					this.Onins_lnameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_subject_id", DbType="Int")]
+		public System.Nullable<int> subject_id
+		{
+			get
+			{
+				return this._subject_id;
+			}
+			set
+			{
+				if ((this._subject_id != value))
+				{
+					if (this._subject_tbl.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.Onsubject_idChanging(value);
+					this.SendPropertyChanging();
+					this._subject_id = value;
+					this.SendPropertyChanged("subject_id");
+					this.Onsubject_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="subject_tbl_ins_tbl", Storage="_subject_tbl", ThisKey="subject_id", OtherKey="subject_id", IsForeignKey=true)]
+		public subject_tbl subject_tbl
+		{
+			get
+			{
+				return this._subject_tbl.Entity;
+			}
+			set
+			{
+				subject_tbl previousValue = this._subject_tbl.Entity;
+				if (((previousValue != value) 
+							|| (this._subject_tbl.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._subject_tbl.Entity = null;
+						previousValue.ins_tbls.Remove(this);
+					}
+					this._subject_tbl.Entity = value;
+					if ((value != null))
+					{
+						value.ins_tbls.Add(this);
+						this._subject_id = value.subject_id;
+					}
+					else
+					{
+						this._subject_id = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("subject_tbl");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
 		}
 	}
 	

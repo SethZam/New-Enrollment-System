@@ -44,6 +44,7 @@
       <Column Name="subject_unit" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="course_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="ins_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="subject_tbl_ins_tbl" Member="ins_tbls" ThisKey="subject_id" OtherKey="subject_id" Type="ins_tbl" />
       <Association Name="course_tbl_subject_tbl" Member="course_tbl" ThisKey="course_id" OtherKey="course_id" Type="course_tbl" IsForeignKey="true" />
     </Type>
   </Table>
@@ -53,6 +54,15 @@
       <Column Name="course_name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Association Name="course_tbl_enrollment_tbl" Member="enrollment_tbls" ThisKey="course_id" OtherKey="course_id" Type="enrollment_tbl" />
       <Association Name="course_tbl_subject_tbl" Member="subject_tbls" ThisKey="course_id" OtherKey="course_id" Type="subject_tbl" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ins_tbl" Member="ins_tbls">
+    <Type Name="ins_tbl">
+      <Column Name="ins_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ins_fname" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ins_lname" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="subject_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="subject_tbl_ins_tbl" Member="subject_tbl" ThisKey="subject_id" OtherKey="subject_id" Type="subject_tbl" IsForeignKey="true" />
     </Type>
   </Table>
   <Function Name="dbo.check_password" Method="check_password">
