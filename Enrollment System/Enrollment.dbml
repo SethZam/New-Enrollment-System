@@ -120,7 +120,7 @@
     </ElementType>
   </Function>
   <Function Name="dbo.enroll_student" Method="enroll_student">
-    <Parameter Name="year" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="year" Type="System.Int32" DbType="Int" />
     <Parameter Name="id" Type="System.Int32" DbType="Int" />
     <Parameter Name="course_id" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />

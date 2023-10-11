@@ -38,10 +38,19 @@ namespace Enrollment_System
 
         private void submit_Click(object sender, EventArgs e)
         {
-             id = GetID(username.ToString());
-             cre = course.Text;
-             courseid = GetCourseID(cre);
-             db.enroll_student(DateTime.Parse(year.SelectedItem.ToString()),Convert.ToInt32(id), Convert.ToInt32(courseid));        
+            if(IsEmpty() is true)
+            {
+                MessageBox.Show("Fill all needed informations");
+            }
+            else
+            {
+                id = GetID(username.ToString());
+                cre = course.Text;
+                courseid = GetCourseID(cre);
+                MessageBox.Show("Submitted Successfully");
+                db.enroll_student(Convert.ToInt32(year.SelectedItem), Convert.ToInt32(id), Convert.ToInt32(courseid));
+            }
+                    
         }
 
         public static int GetID(string username)
@@ -66,6 +75,17 @@ namespace Enrollment_System
                 courseid = item.course_id;
             }
             return courseid;
+        }
+        bool IsEmpty()
+        {
+            if(lastname.Text == "" || firstname.Text == "" || middlename.Text == "" ||year.Text == "" || course.Text == "")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
     }
