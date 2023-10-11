@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Enrollment">
+  <DataContextMoniker Name="/EnrollmentDataContext" />
+  <nestedChildShapes>
+    <classShape Id="44d350f9-2607-460b-ba54-06a52b4c1172" absoluteBounds="1.125, 1, 2, 1.3862939453125">
+      <DataClassMoniker Name="/EnrollmentDataContext/admin" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fd8d7aa6-3b47-4edd-b65f-a18e632ff76d" absoluteBounds="1.1399999999999997, 1.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d2dd126f-cdd0-4111-9b9e-20f473cacb27" absoluteBounds="5.125, 3.625, 2, 1.9631982421875">
+      <DataClassMoniker Name="/EnrollmentDataContext/enrollment_tbl" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8114bb45-6f8a-4643-a772-f0986631489a" absoluteBounds="5.14, 4.085, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6a9bdeb1-1c7e-4e58-bf62-826336f558ad" absoluteBounds="2.125, 3.625, 2, 3.1170068359375">
+      <DataClassMoniker Name="/EnrollmentDataContext/stud_account" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c2056086-ce53-443e-8d02-198c03f77cf0" absoluteBounds="2.1399999999999997, 4.085, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.125 : 4.60659912109375); (5.125 : 4.60659912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EnrollmentDataContext/stud_account/stud_account_enrollment_tbl" />
+      <nodes>
+        <classShapeMoniker Id="6a9bdeb1-1c7e-4e58-bf62-826336f558ad" />
+        <classShapeMoniker Id="d2dd126f-cdd0-4111-9b9e-20f473cacb27" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="d4587db7-a532-4a3b-954f-b6b5e8f95370" absoluteBounds="8.625, 4.125, 2, 1.9631982421875">
+      <DataClassMoniker Name="/EnrollmentDataContext/subject_tbl" />
+      <nestedChildShapes>
+        <elementListCompartment Id="30bf4a06-d141-4b6d-be16-374b771aa571" absoluteBounds="8.64, 4.585, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="eaf56350-59bc-4f6c-ba0e-6865ffc4787d" isExpanded="false" absoluteBounds="5, 1.875, 2, 0.45">
+      <DataClassMoniker Name="/EnrollmentDataContext/course_tbl" />
+      <nestedChildShapes>
+        <elementListCompartment Id="82597563-ee87-4961-bff1-989332f4d5bc" absoluteBounds="5.015, 2.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.0625 : 2.325); (6.0625 : 3.625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EnrollmentDataContext/course_tbl/course_tbl_enrollment_tbl" />
+      <nodes>
+        <classShapeMoniker Id="eaf56350-59bc-4f6c-ba0e-6865ffc4787d" />
+        <classShapeMoniker Id="d2dd126f-cdd0-4111-9b9e-20f473cacb27" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7 : 2.1); (9.625 : 2.1); (9.625 : 4.125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/EnrollmentDataContext/course_tbl/course_tbl_subject_tbl" />
+      <nodes>
+        <classShapeMoniker Id="eaf56350-59bc-4f6c-ba0e-6865ffc4787d" />
+        <classShapeMoniker Id="d4587db7-a532-4a3b-954f-b6b5e8f95370" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
