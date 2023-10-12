@@ -41,18 +41,22 @@ namespace Enrollment_System
             // panel1
             // 
             this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Location = new System.Drawing.Point(26, 110);
+            this.panel1.Location = new System.Drawing.Point(26, 103);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(662, 458);
+            this.panel1.Size = new System.Drawing.Size(955, 465);
             this.panel1.TabIndex = 6;
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(656, 452);
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(955, 465);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label1
             // 
@@ -67,7 +71,7 @@ namespace Enrollment_System
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(540, 84);
+            this.textBox1.Location = new System.Drawing.Point(833, 80);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(148, 20);
             this.textBox1.TabIndex = 8;
@@ -75,7 +79,7 @@ namespace Enrollment_System
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(499, 87);
+            this.label2.Location = new System.Drawing.Point(783, 83);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 13);
             this.label2.TabIndex = 7;
@@ -90,7 +94,8 @@ namespace Enrollment_System
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Name = "AdminEnrolleesPage";
-            this.Size = new System.Drawing.Size(708, 608);
+            this.Size = new System.Drawing.Size(1247, 764);
+            this.Load += new System.EventHandler(this.AdminEnrolleesPage_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

@@ -14,8 +14,9 @@ namespace Enrollment_System
     {
         public AdminDashboard(string user_name)
         {
-            user.Text = user_name.ToString();
+            
             InitializeComponent();
+            user.Text = user_name.ToString();
             adminHomePage1.Show();
             adminHomePage1.BringToFront();
             adminEnrolleesPage1.Hide();

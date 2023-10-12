@@ -46,7 +46,7 @@
         <classShapeMoniker Id="d2dd126f-cdd0-4111-9b9e-20f473cacb27" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(7 : 2.1); (9.75 : 2.1); (9.75 : 2.875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(7 : 2.1); (9.75 : 2.1); (9.75 : 2.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/EnrollmentDataContext/course_tbl/course_tbl_subject_tbl" />
       <nodes>
         <classShapeMoniker Id="eaf56350-59bc-4f6c-ba0e-6865ffc4787d" />
@@ -59,7 +59,7 @@
         <elementListCompartment Id="916fe665-644a-4c74-b7e0-421a6100a5cb" absoluteBounds="8.89, 6.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(9.8125 : 4.8381982421875); (9.8125 : 5.75)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(9.8125 : 4.8381982421875); (9.8125 : 5.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/EnrollmentDataContext/subject_tbl/subject_tbl_ins_tbl" />
       <nodes>
         <classShapeMoniker Id="d4587db7-a532-4a3b-954f-b6b5e8f95370" />
