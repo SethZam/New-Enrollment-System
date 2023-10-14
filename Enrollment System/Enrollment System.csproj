@@ -102,6 +102,12 @@
     <Compile Include="RegisterPage.Designer.cs">
       <DependentUpon>RegisterPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="StudentCORPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StudentCORPage.Designer.cs">
+      <DependentUpon>StudentCORPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="StudentDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,6 +159,9 @@
     </Compile>
     <EmbeddedResource Include="RegisterPage.resx">
       <DependentUpon>RegisterPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentCORPage.resx">
+      <DependentUpon>StudentCORPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StudentDashboard.resx">
       <DependentUpon>StudentDashboard.cs</DependentUpon>

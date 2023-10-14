@@ -12,29 +12,46 @@ namespace Enrollment_System
 {
     public partial class StudentDashboard : Form
     {
+        string usern;
+        EnrollmentDataContext db = new EnrollmentDataContext();
         public StudentDashboard(string username)
         {
             InitializeComponent();
-            user.Text = username;
-            studentHomePage1.Show();
-            studentHomePage1.BringToFront();
-            studentEnrollmentPage1.Hide();
+            usern = username;
+            var result = db.get_info(username).ToList() ;
+            foreach(var item in result)
+            {
+                user.Text = item.stud_fname + " "+ item.stud_mname + " " + item.stud_lname;
+            }
+                
+            studentHomePage2.Show();
+            studentHomePage2.BringToFront();
+            studentEnrollmentPage2.Hide();
+            studentCORPage1.Hide();
+          
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            studentHomePage1.Show();
-            studentHomePage1.BringToFront();
+            studentHomePage2.Show();
+            studentHomePage2.BringToFront();
             Visible = true;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            studentEnrollmentPage1.username = user.Text;
-            studentEnrollmentPage1.Show();
-            studentEnrollmentPage1.BringToFront();
+            studentEnrollmentPage2.username = user.Text;
+            studentEnrollmentPage2.Show();
+            studentEnrollmentPage2.BringToFront();
             Visible = true;
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            studentCORPage1.username = usern;
+            studentCORPage1.Show();
+            studentCORPage1.BringToFront();
+            Visible = true;
+        }
     }
 }
