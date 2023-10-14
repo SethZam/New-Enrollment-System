@@ -48,7 +48,7 @@ namespace Enrollment_System
             {
                 birth = DateTime.Parse(bd.Text);
                 age = GetAge(birth);
-                db.create_account(username.Text, pass.Text, fname.Text, mname.Text, lname.Text, DateTime.Parse(bd.Text), age, addrss.Text, email.Text, tel.Text);
+                db.create_account(username.Text, pass.Text, fname.Text, mname.Text, lname.Text, tel.Text, gender.Text, DateTime.Parse(bd.Text), age, addrss.Text, email.Text);
                 MessageBox.Show("Create account successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Login f1 = new Login();
                 f1.Show();

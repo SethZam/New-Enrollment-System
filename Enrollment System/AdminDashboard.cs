@@ -22,6 +22,7 @@ namespace Enrollment_System
             adminEnrolleesPage1.Hide();
             adminSubjectPage1.Hide();
             adminInstructorPage1.Hide();
+            adminStudentPage1.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -31,6 +32,7 @@ namespace Enrollment_System
             adminEnrolleesPage1.Hide();
             adminSubjectPage1.Hide();
             adminInstructorPage1.Hide();
+            adminStudentPage1.Hide();
             Visible = true;
         }
 
@@ -41,6 +43,7 @@ namespace Enrollment_System
             adminHomePage1.Hide();
             adminSubjectPage1.Hide();
             adminInstructorPage1.Hide();
+            adminStudentPage1.Hide();
             Visible = true;
         }
 
@@ -51,6 +54,7 @@ namespace Enrollment_System
             adminHomePage1.Hide();
             adminEnrolleesPage1.Hide();
             adminInstructorPage1.Hide();
+            adminStudentPage1.Hide();
             Visible = true;
         }
 
@@ -61,6 +65,7 @@ namespace Enrollment_System
             adminHomePage1.Hide();
             adminEnrolleesPage1.Hide();
             adminSubjectPage1.Hide();
+            adminStudentPage1.Hide();
             Visible = true;
         }
 
@@ -72,6 +77,15 @@ namespace Enrollment_System
             Visible = false;
         }
 
-
+        private void button6_Click(object sender, EventArgs e)
+        {
+            adminStudentPage1.Show();
+            adminStudentPage1.BringToFront();
+            adminHomePage1.Hide();
+            adminEnrolleesPage1.Hide();
+            adminSubjectPage1.Hide();
+            adminInstructorPage1.Hide();
+            Visible = true;
+        }
     }
 }

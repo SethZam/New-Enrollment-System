@@ -48,9 +48,8 @@ namespace Enrollment_System
                 cre = course.Text;
                 courseid = GetCourseID(cre);
                 MessageBox.Show("Submitted Successfully");
-                db.enroll_student(Convert.ToInt32(year.SelectedItem), Convert.ToInt32(id), Convert.ToInt32(courseid));
-            }
-                    
+                db.enroll_student(yearlevel.SelectedItem.ToString(), acadyear.SelectedItem.ToString(), sem.SelectedItem.ToString(),status.SelectedItem.ToString(), Convert.ToInt32(id), Convert.ToInt32(courseid));
+            }                  
         }
 
         public static int GetID(string username)
@@ -78,7 +77,7 @@ namespace Enrollment_System
         }
         bool IsEmpty()
         {
-            if(lastname.Text == "" || firstname.Text == "" || middlename.Text == "" ||year.Text == "" || course.Text == "")
+            if(lastname.Text == "" || firstname.Text == "" || middlename.Text == "" ||status.Text == "" || acadyear.Text == "")
             {
                 return true;
             }

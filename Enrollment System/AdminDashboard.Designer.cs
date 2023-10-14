@@ -44,6 +44,7 @@ namespace Enrollment_System
             this.adminSubjectPage1 = new Enrollment_System.AdminSubjectPage();
             this.adminEnrolleesPage1 = new Enrollment_System.AdminEnrolleesPage();
             this.adminHomePage1 = new Enrollment_System.AdminHomePage();
+            this.adminStudentPage1 = new Enrollment_System.AdminStudentPage();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -140,6 +141,7 @@ namespace Enrollment_System
             this.button6.Text = "         Students";
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
@@ -202,16 +204,16 @@ namespace Enrollment_System
             // 
             // adminInstructorPage1
             // 
-            this.adminInstructorPage1.Location = new System.Drawing.Point(251, 3);
+            this.adminInstructorPage1.Location = new System.Drawing.Point(251, 0);
             this.adminInstructorPage1.Name = "adminInstructorPage1";
             this.adminInstructorPage1.Size = new System.Drawing.Size(1121, 672);
             this.adminInstructorPage1.TabIndex = 5;
             // 
             // adminSubjectPage1
             // 
-            this.adminSubjectPage1.Location = new System.Drawing.Point(251, 0);
+            this.adminSubjectPage1.Location = new System.Drawing.Point(251, 30);
             this.adminSubjectPage1.Name = "adminSubjectPage1";
-            this.adminSubjectPage1.Size = new System.Drawing.Size(945, 579);
+            this.adminSubjectPage1.Size = new System.Drawing.Size(1132, 579);
             this.adminSubjectPage1.TabIndex = 4;
             // 
             // adminEnrolleesPage1
@@ -228,11 +230,19 @@ namespace Enrollment_System
             this.adminHomePage1.Size = new System.Drawing.Size(716, 684);
             this.adminHomePage1.TabIndex = 2;
             // 
+            // adminStudentPage1
+            // 
+            this.adminStudentPage1.Location = new System.Drawing.Point(251, 0);
+            this.adminStudentPage1.Name = "adminStudentPage1";
+            this.adminStudentPage1.Size = new System.Drawing.Size(1121, 707);
+            this.adminStudentPage1.TabIndex = 6;
+            // 
             // AdminDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1384, 761);
+            this.Controls.Add(this.adminStudentPage1);
             this.Controls.Add(this.adminInstructorPage1);
             this.Controls.Add(this.adminSubjectPage1);
             this.Controls.Add(this.adminEnrolleesPage1);
@@ -264,5 +274,6 @@ namespace Enrollment_System
         private AdminEnrolleesPage adminEnrolleesPage1;
         private AdminSubjectPage adminSubjectPage1;
         private AdminInstructorPage adminInstructorPage1;
+        private AdminStudentPage adminStudentPage1;
     }
 }

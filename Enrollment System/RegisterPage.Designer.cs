@@ -55,10 +55,12 @@ namespace Enrollment_System
             this.pass = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.username = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.gender = new System.Windows.Forms.ComboBox();
+            this.label17 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -105,7 +107,7 @@ namespace Enrollment_System
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label16.Location = new System.Drawing.Point(45, 413);
+            this.label16.Location = new System.Drawing.Point(45, 330);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(130, 17);
             this.label16.TabIndex = 23;
@@ -115,7 +117,7 @@ namespace Enrollment_System
             // 
             this.tel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tel.Location = new System.Drawing.Point(48, 433);
+            this.tel.Location = new System.Drawing.Point(50, 350);
             this.tel.Name = "tel";
             this.tel.Size = new System.Drawing.Size(179, 23);
             this.tel.TabIndex = 22;
@@ -125,7 +127,7 @@ namespace Enrollment_System
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label15.Location = new System.Drawing.Point(45, 367);
+            this.label15.Location = new System.Drawing.Point(47, 443);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(42, 17);
             this.label15.TabIndex = 21;
@@ -135,7 +137,7 @@ namespace Enrollment_System
             // 
             this.email.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.email.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.email.Location = new System.Drawing.Point(48, 387);
+            this.email.Location = new System.Drawing.Point(50, 463);
             this.email.Name = "email";
             this.email.Size = new System.Drawing.Size(362, 23);
             this.email.TabIndex = 20;
@@ -144,7 +146,7 @@ namespace Enrollment_System
             // 
             this.addrss.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.addrss.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addrss.Location = new System.Drawing.Point(48, 341);
+            this.addrss.Location = new System.Drawing.Point(48, 405);
             this.addrss.Name = "addrss";
             this.addrss.Size = new System.Drawing.Size(362, 23);
             this.addrss.TabIndex = 19;
@@ -154,7 +156,7 @@ namespace Enrollment_System
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label14.Location = new System.Drawing.Point(45, 321);
+            this.label14.Location = new System.Drawing.Point(47, 385);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(60, 17);
             this.label14.TabIndex = 18;
@@ -273,7 +275,7 @@ namespace Enrollment_System
             this.create.FlatAppearance.BorderSize = 0;
             this.create.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.create.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.create.Location = new System.Drawing.Point(48, 489);
+            this.create.Location = new System.Drawing.Point(48, 551);
             this.create.Name = "create";
             this.create.Size = new System.Drawing.Size(147, 43);
             this.create.TabIndex = 9;
@@ -334,6 +336,8 @@ namespace Enrollment_System
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label17);
+            this.panel1.Controls.Add(this.gender);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label16);
             this.panel1.Controls.Add(this.tel);
@@ -362,6 +366,22 @@ namespace Enrollment_System
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(669, 761);
             this.panel1.TabIndex = 9;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.SteelBlue;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button1.Location = new System.Drawing.Point(201, 551);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(147, 43);
+            this.button1.TabIndex = 24;
+            this.button1.Text = "LOGIN";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label10
             // 
@@ -394,21 +414,27 @@ namespace Enrollment_System
             this.username.Size = new System.Drawing.Size(362, 23);
             this.username.TabIndex = 3;
             // 
-            // button1
+            // gender
             // 
-            this.button1.BackColor = System.Drawing.Color.SteelBlue;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(394, 489);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(147, 43);
-            this.button1.TabIndex = 24;
-            this.button1.Text = "LOGIN";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.gender.FormattingEnabled = true;
+            this.gender.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.gender.Location = new System.Drawing.Point(235, 350);
+            this.gender.Name = "gender";
+            this.gender.Size = new System.Drawing.Size(175, 21);
+            this.gender.TabIndex = 25;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.SteelBlue;
+            this.label17.Location = new System.Drawing.Point(235, 330);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(56, 17);
+            this.label17.TabIndex = 26;
+            this.label17.Text = "Gender";
             // 
             // RegisterPage
             // 
@@ -460,5 +486,7 @@ namespace Enrollment_System
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox username;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.ComboBox gender;
     }
 }

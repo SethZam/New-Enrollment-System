@@ -12,9 +12,16 @@ namespace Enrollment_System
 {
     public partial class AdminHomePage : UserControl
     {
+        EnrollmentDataContext db = new EnrollmentDataContext();
         public AdminHomePage( )
         {
             InitializeComponent();           
+        }
+
+        private void AdminHomePage_Load(object sender, EventArgs e)
+        {
+            total_students.Text = db.enrollees_view().Count().ToString();
+            total_instructor.Text = db.view_instructor().Count().ToString();
         }
     }
 }

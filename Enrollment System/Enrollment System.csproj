@@ -71,6 +71,12 @@
     <Compile Include="AdminInstructorPage.Designer.cs">
       <DependentUpon>AdminInstructorPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminStudentPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminStudentPage.Designer.cs">
+      <DependentUpon>AdminStudentPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminSubjectPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -126,6 +132,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminInstructorPage.resx">
       <DependentUpon>AdminInstructorPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminStudentPage.resx">
+      <DependentUpon>AdminStudentPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminSubjectPage.resx">
       <DependentUpon>AdminSubjectPage.cs</DependentUpon>

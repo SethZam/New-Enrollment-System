@@ -30,9 +30,9 @@ namespace Enrollment_System
         private void InitializeComponent()
         {
             this.submit = new System.Windows.Forms.Button();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.course = new System.Windows.Forms.ComboBox();
-            this.year = new System.Windows.Forms.ComboBox();
+            this.yearlevel = new System.Windows.Forms.ComboBox();
+            this.acadyear = new System.Windows.Forms.ComboBox();
+            this.status = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -43,6 +43,10 @@ namespace Enrollment_System
             this.lastname = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.sem = new System.Windows.Forms.ComboBox();
+            this.course = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // submit
@@ -53,7 +57,7 @@ namespace Enrollment_System
             this.submit.FlatAppearance.BorderSize = 0;
             this.submit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.submit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.submit.Location = new System.Drawing.Point(33, 341);
+            this.submit.Location = new System.Drawing.Point(33, 425);
             this.submit.Name = "submit";
             this.submit.Size = new System.Drawing.Size(73, 37);
             this.submit.TabIndex = 48;
@@ -61,48 +65,49 @@ namespace Enrollment_System
             this.submit.UseVisualStyleBackColor = false;
             this.submit.Click += new System.EventHandler(this.submit_Click);
             // 
-            // comboBox3
+            // yearlevel
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "Old",
-            "New"});
-            this.comboBox3.Location = new System.Drawing.Point(499, 241);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(207, 21);
-            this.comboBox3.TabIndex = 47;
-            // 
-            // course
-            // 
-            this.course.FormattingEnabled = true;
-            this.course.Items.AddRange(new object[] {
-            "BSIT",
-            "BSIS",
-            "BIT-CT"});
-            this.course.Location = new System.Drawing.Point(265, 241);
-            this.course.Name = "course";
-            this.course.Size = new System.Drawing.Size(207, 21);
-            this.course.TabIndex = 46;
-            // 
-            // year
-            // 
-            this.year.FormattingEnabled = true;
-            this.year.Items.AddRange(new object[] {
+            this.yearlevel.FormattingEnabled = true;
+            this.yearlevel.Items.AddRange(new object[] {
             "1",
             "2",
             "3",
             "4"});
-            this.year.Location = new System.Drawing.Point(33, 241);
-            this.year.Name = "year";
-            this.year.Size = new System.Drawing.Size(207, 21);
-            this.year.TabIndex = 45;
+            this.yearlevel.Location = new System.Drawing.Point(33, 308);
+            this.yearlevel.Name = "yearlevel";
+            this.yearlevel.Size = new System.Drawing.Size(207, 21);
+            this.yearlevel.TabIndex = 47;
+            // 
+            // acadyear
+            // 
+            this.acadyear.FormattingEnabled = true;
+            this.acadyear.Items.AddRange(new object[] {
+            "2022-2023",
+            "2023-2024",
+            "2024-2025"});
+            this.acadyear.Location = new System.Drawing.Point(33, 371);
+            this.acadyear.Name = "acadyear";
+            this.acadyear.Size = new System.Drawing.Size(207, 21);
+            this.acadyear.TabIndex = 46;
+            // 
+            // status
+            // 
+            this.status.FormattingEnabled = true;
+            this.status.Items.AddRange(new object[] {
+            "Old",
+            "New",
+            "Transferee"});
+            this.status.Location = new System.Drawing.Point(265, 244);
+            this.status.Name = "status";
+            this.status.Size = new System.Drawing.Size(207, 21);
+            this.status.TabIndex = 45;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label7.Location = new System.Drawing.Point(496, 221);
+            this.label7.Location = new System.Drawing.Point(262, 222);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(48, 17);
             this.label7.TabIndex = 44;
@@ -113,7 +118,7 @@ namespace Enrollment_System
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label6.Location = new System.Drawing.Point(262, 221);
+            this.label6.Location = new System.Drawing.Point(262, 288);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(53, 17);
             this.label6.TabIndex = 43;
@@ -124,7 +129,7 @@ namespace Enrollment_System
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label5.Location = new System.Drawing.Point(30, 221);
+            this.label5.Location = new System.Drawing.Point(30, 288);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(76, 17);
             this.label5.TabIndex = 42;
@@ -134,7 +139,7 @@ namespace Enrollment_System
             // 
             this.middlename.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.middlename.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.middlename.Location = new System.Drawing.Point(499, 173);
+            this.middlename.Location = new System.Drawing.Point(33, 242);
             this.middlename.Name = "middlename";
             this.middlename.Size = new System.Drawing.Size(207, 23);
             this.middlename.TabIndex = 41;
@@ -153,7 +158,7 @@ namespace Enrollment_System
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label4.Location = new System.Drawing.Point(496, 153);
+            this.label4.Location = new System.Drawing.Point(30, 222);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(94, 17);
             this.label4.TabIndex = 39;
@@ -201,14 +206,63 @@ namespace Enrollment_System
             this.label1.TabIndex = 35;
             this.label1.Text = "Enrollment";
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.SteelBlue;
+            this.label8.Location = new System.Drawing.Point(262, 351);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(68, 17);
+            this.label8.TabIndex = 49;
+            this.label8.Text = "Semester";
+            // 
+            // sem
+            // 
+            this.sem.FormattingEnabled = true;
+            this.sem.Items.AddRange(new object[] {
+            "First",
+            "Second"});
+            this.sem.Location = new System.Drawing.Point(265, 371);
+            this.sem.Name = "sem";
+            this.sem.Size = new System.Drawing.Size(207, 21);
+            this.sem.TabIndex = 50;
+            // 
+            // course
+            // 
+            this.course.FormattingEnabled = true;
+            this.course.Items.AddRange(new object[] {
+            "BSIT",
+            "BSIS",
+            "BIT-CT"});
+            this.course.Location = new System.Drawing.Point(265, 308);
+            this.course.Name = "course";
+            this.course.Size = new System.Drawing.Size(207, 21);
+            this.course.TabIndex = 51;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.SteelBlue;
+            this.label9.Location = new System.Drawing.Point(30, 351);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(103, 17);
+            this.label9.TabIndex = 52;
+            this.label9.Text = "Academic Year";
+            // 
             // StudentEnrollmentPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.submit);
-            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.course);
-            this.Controls.Add(this.year);
+            this.Controls.Add(this.sem);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.submit);
+            this.Controls.Add(this.yearlevel);
+            this.Controls.Add(this.acadyear);
+            this.Controls.Add(this.status);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -230,9 +284,9 @@ namespace Enrollment_System
         #endregion
 
         private System.Windows.Forms.Button submit;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox course;
-        private System.Windows.Forms.ComboBox year;
+        private System.Windows.Forms.ComboBox yearlevel;
+        private System.Windows.Forms.ComboBox acadyear;
+        private System.Windows.Forms.ComboBox status;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
@@ -243,5 +297,9 @@ namespace Enrollment_System
         private System.Windows.Forms.TextBox lastname;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox sem;
+        private System.Windows.Forms.ComboBox course;
+        private System.Windows.Forms.Label label9;
     }
 }

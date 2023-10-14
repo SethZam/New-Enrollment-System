@@ -1,7 +1,7 @@
 ﻿
 namespace Enrollment_System
 {
-    partial class AdminEnrolleesPage
+    partial class AdminStudentPage
     {
         /// <summary> 
         /// Required designer variable.
@@ -30,64 +30,63 @@ namespace Enrollment_System
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvEnrolled = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEnrolled)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Location = new System.Drawing.Point(26, 103);
+            this.panel1.Controls.Add(this.dgvEnrolled);
+            this.panel1.Location = new System.Drawing.Point(3, 94);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1098, 465);
-            this.panel1.TabIndex = 6;
+            this.panel1.Size = new System.Drawing.Size(1099, 465);
+            this.panel1.TabIndex = 10;
             // 
-            // dataGridView1
+            // dgvEnrolled
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(1098, 465);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dgvEnrolled.AllowUserToAddRows = false;
+            this.dgvEnrolled.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvEnrolled.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dgvEnrolled.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEnrolled.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvEnrolled.Location = new System.Drawing.Point(0, 0);
+            this.dgvEnrolled.Name = "dgvEnrolled";
+            this.dgvEnrolled.ReadOnly = true;
+            this.dgvEnrolled.Size = new System.Drawing.Size(1099, 465);
+            this.dgvEnrolled.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label1.Location = new System.Drawing.Point(20, 40);
+            this.label1.Location = new System.Drawing.Point(-3, 27);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(202, 31);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "New Enrollees";
+            this.label1.Size = new System.Drawing.Size(170, 31);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Student List";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(833, 80);
+            this.textBox1.Location = new System.Drawing.Point(840, 68);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(148, 20);
-            this.textBox1.TabIndex = 8;
+            this.textBox1.TabIndex = 12;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(783, 83);
+            this.label2.Location = new System.Drawing.Point(790, 71);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 13);
-            this.label2.TabIndex = 7;
+            this.label2.TabIndex = 11;
             this.label2.Text = "Search:";
             // 
-            // AdminEnrolleesPage
+            // AdminStudentPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -95,11 +94,11 @@ namespace Enrollment_System
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
-            this.Name = "AdminEnrolleesPage";
-            this.Size = new System.Drawing.Size(1247, 764);
-            this.Load += new System.EventHandler(this.AdminEnrolleesPage_Load);
+            this.Name = "AdminStudentPage";
+            this.Size = new System.Drawing.Size(1191, 680);
+            this.Load += new System.EventHandler(this.AdminStudentPage_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEnrolled)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -108,7 +107,7 @@ namespace Enrollment_System
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvEnrolled;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
