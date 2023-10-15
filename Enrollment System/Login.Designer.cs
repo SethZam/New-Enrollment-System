@@ -195,11 +195,11 @@ namespace Enrollment_System
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("SansSerif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.AliceBlue;
             this.label7.Location = new System.Drawing.Point(256, 344);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(77, 23);
+            this.label7.Size = new System.Drawing.Size(78, 25);
             this.label7.TabIndex = 9;
             this.label7.Text = "System";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -207,11 +207,11 @@ namespace Enrollment_System
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("SansSerif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.AliceBlue;
             this.label6.Location = new System.Drawing.Point(162, 311);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(171, 23);
+            this.label6.Size = new System.Drawing.Size(172, 25);
             this.label6.TabIndex = 8;
             this.label6.Text = "CCICT Enrollment";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -219,14 +219,14 @@ namespace Enrollment_System
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("SansSerif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.AliceBlue;
             this.label5.Location = new System.Drawing.Point(183, 275);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 3, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(150, 23);
+            this.label5.Size = new System.Drawing.Size(148, 25);
             this.label5.TabIndex = 7;
-            this.label5.Text = "Welcome to the";
+            this.label5.Text = "Welcome to the\r\n";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // Login

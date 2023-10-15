@@ -69,6 +69,7 @@ namespace Enrollment_System
             i.Show();
             i.BringToFront();
             Visible = false;
+            MessageBox.Show("Successfully Logged Out!", "Log Out", MessageBoxButtons.OK);
         }
     }
 }

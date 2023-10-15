@@ -55,12 +55,12 @@ namespace Enrollment_System
             this.pass = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label17 = new System.Windows.Forms.Label();
+            this.gender = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.username = new System.Windows.Forms.TextBox();
-            this.gender = new System.Windows.Forms.ComboBox();
-            this.label17 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -80,11 +80,11 @@ namespace Enrollment_System
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("SansSerif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.AliceBlue;
             this.label7.Location = new System.Drawing.Point(256, 315);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(77, 23);
+            this.label7.Size = new System.Drawing.Size(78, 25);
             this.label7.TabIndex = 9;
             this.label7.Text = "System";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -92,12 +92,12 @@ namespace Enrollment_System
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("SansSerif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.AliceBlue;
             this.label5.Location = new System.Drawing.Point(183, 235);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 3, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(150, 23);
+            this.label5.Size = new System.Drawing.Size(148, 25);
             this.label5.TabIndex = 7;
             this.label5.Text = "Welcome to the";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -236,11 +236,11 @@ namespace Enrollment_System
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("SansSerif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.AliceBlue;
             this.label6.Location = new System.Drawing.Point(162, 275);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(171, 23);
+            this.label6.Size = new System.Drawing.Size(172, 25);
             this.label6.TabIndex = 8;
             this.label6.Text = "CCICT Enrollment";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -367,6 +367,28 @@ namespace Enrollment_System
             this.panel1.Size = new System.Drawing.Size(669, 761);
             this.panel1.TabIndex = 9;
             // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.SteelBlue;
+            this.label17.Location = new System.Drawing.Point(235, 330);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(56, 17);
+            this.label17.TabIndex = 26;
+            this.label17.Text = "Gender";
+            // 
+            // gender
+            // 
+            this.gender.FormattingEnabled = true;
+            this.gender.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.gender.Location = new System.Drawing.Point(235, 350);
+            this.gender.Name = "gender";
+            this.gender.Size = new System.Drawing.Size(175, 21);
+            this.gender.TabIndex = 25;
+            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.SteelBlue;
@@ -413,28 +435,6 @@ namespace Enrollment_System
             this.username.Name = "username";
             this.username.Size = new System.Drawing.Size(362, 23);
             this.username.TabIndex = 3;
-            // 
-            // gender
-            // 
-            this.gender.FormattingEnabled = true;
-            this.gender.Items.AddRange(new object[] {
-            "Male",
-            "Female"});
-            this.gender.Location = new System.Drawing.Point(235, 350);
-            this.gender.Name = "gender";
-            this.gender.Size = new System.Drawing.Size(175, 21);
-            this.gender.TabIndex = 25;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label17.Location = new System.Drawing.Point(235, 330);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(56, 17);
-            this.label17.TabIndex = 26;
-            this.label17.Text = "Gender";
             // 
             // RegisterPage
             // 
