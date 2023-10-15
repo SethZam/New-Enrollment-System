@@ -46,10 +46,17 @@ namespace Enrollment_System
             db.update_stud_info(username ,txtfname.Text, txtmname.Text, txtlname.Text, txtphone.Text, txtgender.Text, DateTime.Parse(dtpbday.Text), Convert.ToInt32(age), txtaddress.Text, txtemail.Text);
             db.get_stud_info(username);
             MessageBox.Show("Successfully Updated!", "Update", MessageBoxButtons.OK);
+            this.Hide();
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form is StudentDashboard)
+                {
+                    form.BringToFront();
+                    return;
+                }
+            }
             StudentDashboard sd = new StudentDashboard(username);
             sd.Show();
-            StudentPIPage si = new StudentPIPage();
-            si.Hide();
         }
 
         static int GetAge(DateTime birth)

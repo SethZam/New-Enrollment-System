@@ -195,28 +195,6 @@
       <Column Name="stud_mname" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
     </ElementType>
   </Function>
-  <Function Name="dbo.get_subject" Method="get_subject">
-    <ElementType Name="get_subjectResult">
-      <Column Name="subject_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="subject_name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.view_cor" Method="view_cor">
-    <Parameter Name="studid" Type="System.Int32" DbType="Int" />
-    <ElementType Name="view_corResult">
-      <Column Name="Subject" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
-      <Column Name="[Subject Description]" Member="Subject_Description" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="[Unit/s]" Member="Unit_s" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="Insructor" Type="System.String" DbType="VarChar(55)" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.view_instructor" Method="view_instructor">
-    <ElementType Name="view_instructorResult">
-      <Column Name="[Instructor Name]" Member="Instructor_Name" Type="System.String" DbType="VarChar(102)" CanBeNull="true" />
-      <Column Name="Subject" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="[Subject Code]" Member="Subject_Code" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
-    </ElementType>
-  </Function>
   <Function Name="dbo.get_stud_info" Method="get_stud_info">
     <Parameter Name="username" Type="System.String" DbType="VarChar(50)" />
     <ElementType Name="get_stud_infoResult">
@@ -235,6 +213,12 @@
       <Column Name="stud_isActive" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
     </ElementType>
   </Function>
+  <Function Name="dbo.get_subject" Method="get_subject">
+    <ElementType Name="get_subjectResult">
+      <Column Name="subject_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="subject_name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
   <Function Name="dbo.update_stud_info" Method="update_stud_info">
     <Parameter Name="username" Type="System.String" DbType="VarChar(50)" />
     <Parameter Name="fname" Type="System.String" DbType="VarChar(50)" />
@@ -247,5 +231,21 @@
     <Parameter Name="address" Type="System.String" DbType="VarChar(MAX)" />
     <Parameter Name="email" Type="System.String" DbType="VarChar(50)" />
     <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.view_cor" Method="view_cor">
+    <Parameter Name="studid" Type="System.Int32" DbType="Int" />
+    <ElementType Name="view_corResult">
+      <Column Name="Subject" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="[Subject Description]" Member="Subject_Description" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[Unit/s]" Member="Unit_s" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Insructor" Type="System.String" DbType="VarChar(55)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.view_instructor" Method="view_instructor">
+    <ElementType Name="view_instructorResult">
+      <Column Name="[Instructor Name]" Member="Instructor_Name" Type="System.String" DbType="VarChar(102)" CanBeNull="true" />
+      <Column Name="Subject" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="[Subject Code]" Member="Subject_Code" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+    </ElementType>
   </Function>
 </Database>
