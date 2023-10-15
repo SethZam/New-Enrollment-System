@@ -126,6 +126,12 @@
     <Compile Include="StudentHomePage.Designer.cs">
       <DependentUpon>StudentHomePage.cs</DependentUpon>
     </Compile>
+    <Compile Include="StudentPIPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StudentPIPage.Designer.cs">
+      <DependentUpon>StudentPIPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Username.cs" />
     <EmbeddedResource Include="AdminDashboard.resx">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
@@ -171,6 +177,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StudentHomePage.resx">
       <DependentUpon>StudentHomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentPIPage.resx">
+      <DependentUpon>StudentPIPage.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Enrollment.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
