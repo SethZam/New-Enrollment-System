@@ -28,6 +28,7 @@ namespace Enrollment_System
             studentHomePage2.BringToFront();
             studentEnrollmentPage2.Hide();
             studentCORPage1.Hide();
+            studentPIPage1.Hide();
           
         }
 
@@ -40,7 +41,7 @@ namespace Enrollment_System
 
         private void button2_Click(object sender, EventArgs e)
         {
-            studentEnrollmentPage2.username = user.Text;
+            studentEnrollmentPage2.username = usern;
             studentEnrollmentPage2.Show();
             studentEnrollmentPage2.BringToFront();
             Visible = true;
@@ -52,6 +53,22 @@ namespace Enrollment_System
             studentCORPage1.Show();
             studentCORPage1.BringToFront();
             Visible = true;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            studentPIPage1.username = usern;
+            studentPIPage1.Show();
+            studentPIPage1.BringToFront();
+            Visible = true;
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            Login i = new Login();
+            i.Show();
+            i.BringToFront();
+            Visible = false;
         }
     }
 }

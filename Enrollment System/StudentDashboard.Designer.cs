@@ -37,9 +37,10 @@ namespace Enrollment_System
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.studentCORPage1 = new Enrollment_System.StudentCORPage();
-            this.studentEnrollmentPage2 = new Enrollment_System.StudentEnrollmentPage();
             this.studentHomePage2 = new Enrollment_System.StudentHomePage();
+            this.studentEnrollmentPage2 = new Enrollment_System.StudentEnrollmentPage();
+            this.studentCORPage1 = new Enrollment_System.StudentCORPage();
+            this.studentPIPage1 = new Enrollment_System.StudentPIPage();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -91,6 +92,7 @@ namespace Enrollment_System
             this.button9.Text = "         Logout";
             this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button4
             // 
@@ -105,6 +107,7 @@ namespace Enrollment_System
             this.button4.Text = "         Personal Information";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -151,13 +154,12 @@ namespace Enrollment_System
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // studentCORPage1
+            // studentHomePage2
             // 
-            this.studentCORPage1.Location = new System.Drawing.Point(280, 0);
-            this.studentCORPage1.Name = "studentCORPage1";
-            this.studentCORPage1.Size = new System.Drawing.Size(978, 735);
-            this.studentCORPage1.TabIndex = 3;
-            this.studentCORPage1.username = null;
+            this.studentHomePage2.Location = new System.Drawing.Point(279, 0);
+            this.studentHomePage2.Name = "studentHomePage2";
+            this.studentHomePage2.Size = new System.Drawing.Size(971, 761);
+            this.studentHomePage2.TabIndex = 5;
             // 
             // studentEnrollmentPage2
             // 
@@ -167,18 +169,28 @@ namespace Enrollment_System
             this.studentEnrollmentPage2.TabIndex = 4;
             this.studentEnrollmentPage2.username = null;
             // 
-            // studentHomePage2
+            // studentCORPage1
             // 
-            this.studentHomePage2.Location = new System.Drawing.Point(279, 0);
-            this.studentHomePage2.Name = "studentHomePage2";
-            this.studentHomePage2.Size = new System.Drawing.Size(971, 761);
-            this.studentHomePage2.TabIndex = 5;
+            this.studentCORPage1.Location = new System.Drawing.Point(280, 0);
+            this.studentCORPage1.Name = "studentCORPage1";
+            this.studentCORPage1.Size = new System.Drawing.Size(978, 735);
+            this.studentCORPage1.TabIndex = 3;
+            this.studentCORPage1.username = null;
+            // 
+            // studentPIPage1
+            // 
+            this.studentPIPage1.Location = new System.Drawing.Point(279, 0);
+            this.studentPIPage1.Name = "studentPIPage1";
+            this.studentPIPage1.Size = new System.Drawing.Size(979, 761);
+            this.studentPIPage1.TabIndex = 6;
+            this.studentPIPage1.username = null;
             // 
             // StudentDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1262, 761);
+            this.Controls.Add(this.studentPIPage1);
             this.Controls.Add(this.studentHomePage2);
             this.Controls.Add(this.studentEnrollmentPage2);
             this.Controls.Add(this.studentCORPage1);
@@ -205,5 +217,6 @@ namespace Enrollment_System
         private StudentCORPage studentCORPage1;
         private StudentEnrollmentPage studentEnrollmentPage2;
         private StudentHomePage studentHomePage2;
+        private StudentPIPage studentPIPage1;
     }
 }
